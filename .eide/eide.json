@@ -4,8 +4,10 @@
   "dependenceList": [],
   "srcDirs": [
     ".eide/deps",
+    "hal",
     "src",
-    "hal"
+    "Hardware",
+    "System"
   ],
   "outDir": "build",
   "deviceName": "STM32F102C8",
