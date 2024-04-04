@@ -1,4 +1,5 @@
 #include "stm32f10x.h"
+#include "led.h"
 void LED_Init(GPIO_TypeDef *gpix, uint16_t pin, GPIOMode_TypeDef mode, GPIOSpeed_TypeDef speed)
 {
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
@@ -11,7 +12,7 @@ void LED_Init(GPIO_TypeDef *gpix, uint16_t pin, GPIOMode_TypeDef mode, GPIOSpeed
     GPIO_SetBits(gpix, pin);
 }
 
-void Led_Turn(GPIO_TypeDef *gpix, uint16_t pin)
+void LED_Turn(GPIO_TypeDef *gpix, uint16_t pin)
 {
     GPIO_WriteBit(gpix, pin, !GPIO_ReadOutputDataBit(gpix, pin));
 }
